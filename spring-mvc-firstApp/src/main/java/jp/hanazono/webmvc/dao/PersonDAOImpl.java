@@ -45,7 +45,16 @@ public class PersonDAOImpl implements PersonDAO{
 	}
 
 	public void updatePerson(Person person) {
-		// TODO Auto-generated method stub
+		StringBuilder sql = new StringBuilder();
+		sql.append("UPDATE PERSON SET FIRSTNAME = '");
+		sql.append(person.getFirstname());
+		sql.append("', LASTNAME = '");
+		sql.append(person.getLastname());
+		sql.append("', AGE = '");
+		sql.append(person.getAge());
+		sql.append("' WHERE ID = ");
+		sql.append(person.getId());
+		template.update(sql.toString());
 		
 	}
 
