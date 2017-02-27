@@ -25,7 +25,7 @@
 				<TD><input type="text" value="${person.age}"></TD>
 				<td>
 					<div>
-						<a href="edit?id=${person.id}"><img alt="save"
+						<a href="save?id=${person.id}"><img alt="save"
 							src="pages/images/save_icon_15.png" border="0" ></a>
 					</div>
 				</td>
