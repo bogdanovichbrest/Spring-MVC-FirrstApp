@@ -29,9 +29,7 @@
 				<TD>${person.age}</TD>
 				<td>
 					<div>
-						<a href="edit?id=${person.id}"><img alt="add"
-							src="pages/images/add_icon_15.png" border="0"></a> <img
-							alt="edit" src="pages/images/edit_icon_15.png" border="0">
+						<img alt="edit" src="pages/images/edit_icon_15.png" border="0">
 						<a href="delete?id=${person.id}"><img alt="delete"
 							src="pages/images/delete_icon_15.png" border="0"> </a>
 					</div>
@@ -40,5 +38,11 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<div>
+		<p>
+			Add new Person <a href="edit"><img alt="add"
+				src="pages/images/add_icon_15.png" border="0"></a>
+		</p>
+	</div>
 </body>
 </html>
