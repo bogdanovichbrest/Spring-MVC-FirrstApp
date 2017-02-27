@@ -29,7 +29,7 @@
 				<TD>${person.age}</TD>
 				<td>
 					<div>
-						<img alt="edit" src="pages/images/edit_icon_15.png" border="0">
+						<a href="edit?id=${person.id}"><img alt="edit" src="pages/images/edit_icon_15.png" border="0"></a>
 						<a href="delete?id=${person.id}"><img alt="delete"
 							src="pages/images/delete_icon_15.png" border="0"> </a>
 					</div>
