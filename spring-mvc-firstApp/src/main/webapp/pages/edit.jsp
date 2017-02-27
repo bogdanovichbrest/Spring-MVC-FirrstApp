@@ -15,18 +15,18 @@
 			<th>Person Lastname</th>
 			<th>Person Age</th>
 			<th>
-				<div>Actions</div>
+				<div>Action</div>
 			</th>
 		</TR>
 			<tr>
-				<TD><input type="text" value="${person.id}"></TD>
+				<TD><input type="text" value="${person.id}" readonly="readonly"></TD>
 				<TD><input type="text" value="${person.firstname}"></TD>
 				<TD><input type="text" value="${person.lastname}"></TD>
 				<TD><input type="text" value="${person.age}"></TD>
 				<td>
 					<div>
-						<a href="edit?id=${person.id}"><img alt="add"
-							src="pages/images/add_icon_15.png" border="0"></a>
+						<a href="edit?id=${person.id}"><img alt="save"
+							src="pages/images/save_icon_15.png" border="0" ></a>
 					</div>
 				</td>
 
