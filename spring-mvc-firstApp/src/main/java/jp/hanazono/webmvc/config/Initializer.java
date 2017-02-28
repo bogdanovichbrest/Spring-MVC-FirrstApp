@@ -15,6 +15,12 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class Initializer implements WebApplicationInitializer {
 	private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
 
+	/**
+	 * Initializing web application
+	 * 
+	 * @param servlrtContext
+	 * 		ServletContext object
+	 */
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 		ctx.register(WebConfig.class);
