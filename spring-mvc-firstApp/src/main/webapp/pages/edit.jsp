@@ -19,17 +19,18 @@
 			</th>
 		</TR>
 			<tr>
-				<TD><input type="text" value="${person.id}" readonly="readonly"></TD>
-				<TD><input type="text" value="${person.firstname}"></TD>
-				<TD><input type="text" value="${person.lastname}"></TD>
-				<TD><input type="text" value="${person.age}"></TD>
+			<form action="save?id=${person.id}&firstname=${person.firstname}&lastname=${person.lastname}&age=${person.age}">
+				<TD><input name="id" type="text" value="${person.id}" readonly="readonly"></TD>
+				<TD><input name="firstname" type="text" value="${person.firstname}"></TD>
+				<TD><input name="lastname" type="text" value="${person.lastname}"></TD>
+				<TD><input name="age" type="text" value="${person.age}"></TD>
 				<td>
 					<div>
-						<a href="save?id=${person.id}"><img alt="save"
-							src="pages/images/save_icon_15.png" border="0" ></a>
+						<input type="image"  alt="save"
+							src="pages/images/save_icon_15.png" border="0" >
 					</div>
 				</td>
-
+</form>
 			</tr>
 	</table>
 
