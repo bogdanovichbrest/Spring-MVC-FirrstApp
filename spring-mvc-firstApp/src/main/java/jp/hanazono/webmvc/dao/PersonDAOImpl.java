@@ -28,7 +28,13 @@ public class PersonDAOImpl implements PersonDAO{
 	{
 		this.template = new JdbcTemplate(this.dataSource);
 	}
-
+	
+	/**
+	 * Create new Person in database
+	 * 
+	 *  @param person
+	 *  	Person object
+	 */
 	public void addPerson(Person person) {
 		StringBuilder sql = new StringBuilder();
 		sql.append("INSERT INTO PERSON VALUES(");
@@ -43,7 +49,13 @@ public class PersonDAOImpl implements PersonDAO{
 		template.execute(sql.toString());
 		
 	}
-
+	
+	/**
+	 * Update the Person object in database 
+	 * 
+	 * @param person
+	 * 		Person object
+	 */
 	public void updatePerson(Person person) {
 		StringBuilder sql = new StringBuilder();
 		sql.append("UPDATE PERSON SET FIRSTNAME = '");
@@ -78,7 +90,7 @@ public class PersonDAOImpl implements PersonDAO{
 		public Person mapRow(ResultSet rs, int numRow) throws SQLException {
 			Person person = new Person();
 			person.setId(rs.getInt("ID"));
-			person.setFirstname(rs.getString("Firstname"));
+			person.setFirstname(rs.getString("FIRSTNAME"));
 			person.setLastname(rs.getString("LASTNAME"));
 			person.setAge(rs.getInt("AGE"));
 			return person;
