@@ -46,7 +46,19 @@ public class AppController {
 	}
 
 	@RequestMapping("/save")
-	public String savePerson() {
+	public String savePerson(HttpServletRequest request) {
+		Person person = new Person();
+
+		person.setFirstname(request.getParameter("firstname"));
+		person.setLastname(request.getParameter("lastname"));
+		person.setAge(Integer.parseInt(request.getParameter("age")));
+		if (request.getParameter("id") != "") {
+			person.setId(Integer.parseInt(request.getParameter("id")));
+			personDAO.updatePerson(person);
+
+		} else {
+			personDAO.addPerson(person);
+		}
 		return "redirect:/";
 
 	}
